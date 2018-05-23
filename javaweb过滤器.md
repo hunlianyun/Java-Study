@@ -51,6 +51,7 @@ public interface Filter {
 
  如果没做任何配置，默认是 `REQUEST`，也可以同时配置多个 dispatcher。
  另外，如果多个过滤器对同一个资源都进行了配置，其执行顺序取决于各个过滤器的 `<filter-mapping>` 标签在 xml 中的顺序，在执行过程中，若某一过滤器在 `doFilter()` 方法中未执行 `chain.doFilter()` 方法，后续过滤器便不会执行。
+ 
 3. 也可以通过注解的方式来配置 Filter
 `@WebFilter(urlPatterns = { "/xxx" })`
 也可以配置各项参数，功能与 xml 配置类似， 不再赘述。
